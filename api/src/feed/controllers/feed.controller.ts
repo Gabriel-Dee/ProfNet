@@ -22,8 +22,7 @@ export class FeedController {
   @Put(':id')
   update(
     @Param('id') id: number,
-    @Body()
-    feedpost: FeedPost,
+    @Body() feedpost: FeedPost,
   ): Observable<UpdateResult> {
     return this.feedService.updatePost(id, feedpost);
   }
